@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="left-bg"></div>
+    <div class="cards-container">
+      <div class="front-card">
+        <!-- <div class="circles">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div> -->
+        <div class="img-box">
+          <img src="./images/card-logo.svg" alt="" aria-hidden="true">
+        </div>
+        <div class="card-nums">0000 0000 0000 0000</div>
+        <div class="name-date">
+          <div class="card-name">Jane Appleseed</div>
+          <div class="card-date"><span class="month-span">00</span>/<span class="year-span">00</span></div>
+        </div>
+      </div>
+      <div class="back-card">
+        <div class="cvc-back">000</div>
+      </div>
+    </div>
+
+
+    <div class="form-container">
+      <form>
+        <div class="name">Cardholder Name</div>
+        <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed" minlength="5" maxlength="25" required>
+        <div class="letters d-none"></div>
+        <div class="number">Card Number</div>
+        <input type="number" id="number" placeholder="e.g. 1234 5678 9123 0000" required oninput="creditCardKeyDown(event)">
+        <div class="numbers"></div>
+        <div class="texts">
+          <div class="date">Exp. Date (MM/YY)</div>
+          <div class="cvc">CVC</div>
+        </div>
+        <div class="date-cvc">
+          <input type="number" placeholder="MM" min="1" max="12" class="month" oninput="monthsKeyDown(event)" required>
+          <input type="number" placeholder="YY" min="23" max="30" class="year" oninput="yearsKeyDown(event)" required>
+          <input type="number" placeholder="e.g. 123" class="cvc-input" required oninput="cvcKeyDown(event)">
+        </div>
+        <button class="btn confirm">Confirm</button>
+      </form>
+    </div>
+
+    <div class="completed d-none">
+      <div class="img">
+        <img src="./images/icon-complete.svg" alt="" aria-hidden="true">
+      </div>
+      <h2>Thank you!</h2>
+      <p>We've added your card details</p>
+      <div class="btn continue">Continue</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

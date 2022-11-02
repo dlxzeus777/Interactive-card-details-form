@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body
+{
+    min-height: 100vh;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    font-size: 18px;
+    padding-bottom: 1rem;
+}
+.btn
+{
+    display: block;
+}
+.left-bg
+{
+    width: 30vw;
+    height: 100vh;
+    background-image: url('./images/bg-main-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.form-container
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30rem;
+}
+
+.front-card
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    color: white;
+    padding: 1.5rem;
+    height: 10rem;
+    width: 20rem;
+    border-radius: 10px;
+    background-image: url('./images/bg-card-front.png');
+    position: relative;
+    right: 4rem;
+    margin-bottom: 2rem;
+}
+.back-card
+{
+    color: white;
+    padding: 1.5rem;
+    height: 10rem;
+    width: 20rem;
+    border-radius: 10px;
+    background-image: url('./images/bg-card-back.png');
+    background-position: center 0%;
+    background-size: cover;
+}
+
+.wrapper
+{
+    display: flex;
+    align-items: center;
+}
+
+.circle1
+{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.circle2
+{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.circles
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+.name-date
+{
+    display: flex;
+    font-size: .9rem;
+    justify-content: space-between;
+    width: 100%;
+}
+.card-nums
+{
+    font-size: 1.8rem;
+    width: 100%;
+}
+.cvc-back
+{
+    position: relative;
+    top: 67px;
+    left: 17rem;
+}
+.cards-container
+{
+    position: relative;
+    right: 15rem;
+}
+input
+{
+    padding: .7rem 0;
+    text-indent: 1rem;
+    width: 99%;
+    font-family: 'Space Grotesk', sans-serif;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+{
+  -webkit-appearance: none;
+}
+.month
+{
+    width: 100%;
+}
+.year
+{
+    width: 100%;
+    margin: 0 1rem;
+}
+.date-cvc
+{
+    display: flex;
+    width: 100%;
+}
+.texts
+{
+    display: flex;
+    justify-content: space-between;
+    width: 77%;
+}
+.number, .texts{
+    margin-top: 1.5rem;
+}
+.btn{
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.8rem 0;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;;
+}
+
+textarea:focus, input:focus{
+    outline: 2px solid hsl(278, 68%, 11%);
+}
+.d-none{
+    display: none !important;
+}
+.completed
+{
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 95%;
+}
+.completed h2{
+    text-transform: uppercase;
+    color: hsl(278, 68%, 11%);
+    margin-bottom: 0;
+}
+.completed .btn{
+    text-align: center;
+}
+.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.red-border{
+    border: 2px solid hsl(0, 100%, 66%);
+}
+
+@media (max-width: 1230px)
+{
+    .back-card
+    {
+        margin-bottom: -5.6rem;
+    }
+    .wrapper{
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    .left-bg
+    {
+        width: 100vw;
+        height: 30vh;
+    }
+    .front-card
+    {
+        right: 3rem;
+    }
+    .cards-container
+    {
+        right: 0;
+        bottom: 7rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .form-container
+    {
+        max-width: 95%;
+        width: 35rem;
+    }
+}
+@media (max-width:470px)
+{
+    .front-card
+    {
+        right: 0;
+    }
+}
+
+@media (max-width: 400px)
+{
+    .card-nums
+    {
+        font-size: 1.43rem;
+    }
+    .front-card
+    {
+        width: 16rem;
+    }
+    .back-card
+    {
+        
+        width: 16rem;
+    }
+    .cvc-back
+    {
+        left: 15rem;
+    }
+}
+
+@media (max-width: 330px)
+{
+    .front-card
+    {
+        max-width: 95%;
+        width: 16rem;
+    }
+    .back-card
+    {
+        max-width: 95%;
+        width: 16rem;
+    }
+}
+
+@media (max-width: 310px)
+{
+    .front-card
+    {
+        width: 14rem;
+    }
+    .back-card
+    {
+        width: 14rem;
+    }
+    .card-nums
+    {
+        font-size: 1.26rem;
+    }
+    .cvc-back
+    {
+        left: 13rem;
+    }
+}
